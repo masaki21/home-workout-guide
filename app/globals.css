@@ -238,7 +238,9 @@ li {
 .feature-card,
 .fit-card,
 .faq-list article,
-.price-card {
+.price-card,
+.policy-card,
+.policy-page__card {
   border: 1px solid rgba(17, 29, 46, 0.1);
   border-radius: 26px;
   background: rgba(255, 253, 247, 0.9);
@@ -470,6 +472,56 @@ li {
 
 .faq-list {
   margin-top: 20px;
+}
+
+.policy-card {
+  padding: 26px;
+}
+
+.policy-grid,
+.policy-links {
+  display: grid;
+  gap: 14px;
+}
+
+.policy-grid {
+  margin-top: 20px;
+}
+
+.policy-grid article {
+  padding: 20px;
+  border: 1px solid rgba(17, 29, 46, 0.1);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.policy-links a,
+.policy-page a {
+  color: var(--teal-dark);
+  font-weight: 900;
+}
+
+.policy-page {
+  width: min(920px, calc(100vw - 28px));
+  margin: 0 auto;
+  padding: 24px 0 72px;
+}
+
+.policy-page__card {
+  padding: 28px;
+}
+
+.policy-page__card h1 {
+  font-size: clamp(2.4rem, 10vw, 4.8rem);
+}
+
+.policy-page__card h2 {
+  margin-top: 28px;
+  font-size: clamp(1.5rem, 6vw, 2.2rem);
+}
+
+.policy-page__actions {
+  margin-top: 28px;
 }
 
 .final-cta {
@@ -929,6 +981,11 @@ li {
   .card-grid,
   .preview-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .policy-grid,
+  .policy-links {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .fit,

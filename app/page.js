@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const supportEmail = process.env.NEXT_PUBLIC_SUPPORT_EMAIL || "support@example.com";
 
 const price = "$5";
@@ -337,6 +339,40 @@ export default function HomePage() {
               <p>{faq.answer}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="section policy-section">
+        <div className="policy-card">
+          <p className="eyebrow">Support And Policies</p>
+          <h2>Clear purchase terms before checkout.</h2>
+          <div className="policy-grid">
+            <article>
+              <h3>Delivery</h3>
+              <p>
+                This is a one-time purchase digital guide. After successful payment,
+                customers receive instant online access through the success page and guide link.
+              </p>
+            </article>
+            <article>
+              <h3>Refunds</h3>
+              <p>
+                Refund requests are reviewed case by case. If access fails after a completed payment,
+                contact support first so we can restore access or review the order.
+              </p>
+            </article>
+            <article>
+              <h3>Support</h3>
+              <p>
+                Support contact: <a href={`mailto:${supportEmail}`}>{supportEmail}</a>
+              </p>
+            </article>
+          </div>
+          <div className="policy-links" aria-label="Policy links">
+            <Link href="/refund-policy">Refund Policy</Link>
+            <Link href="/terms">Terms</Link>
+            <Link href="/privacy">Privacy</Link>
+          </div>
         </div>
       </section>
 
