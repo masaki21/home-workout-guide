@@ -1,0 +1,8 @@
+{
+  "/api/checkout/route": "app/api/checkout/route.js",
+  "/guide/30-day-home-workout-mission-8k4n2/start/page": "app/guide/30-day-home-workout-mission-8k4n2/start/page.js",
+  "/page": "app/page.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/success/page": "app/success/page.js"
+}

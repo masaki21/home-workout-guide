@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/mac/ai_workfloes/app_build/app/success/CopyLinkButton.js"],"sourcesContent":["\"use client\";\n\nimport { useState } from \"react\";\n\nexport default function CopyLinkButton({ value }) {\n  const [copied, setCopied] = useState(false);\n\n  async function copyLink() {\n    await navigator.clipboard.writeText(value);\n    setCopied(true);\n    window.setTimeout(() => setCopied(false), 1800);\n  }\n\n  return (\n    <button className=\"button button--secondary\" type=\"button\" onClick={copyLink}>\n      {copied ? \"Copied\" : \"Copy Link\"}\n    </button>\n  );\n}\n"],"names":[],"mappings":";;;;;AAEA;AAFA;;;AAIe,SAAS,eAAe,EAAE,KAAK,EAAE;IAC9C,MAAM,CAAC,QAAQ,UAAU,GAAG,IAAA,iNAAQ,EAAC;IAErC,eAAe;QACb,MAAM,UAAU,SAAS,CAAC,SAAS,CAAC;QACpC,UAAU;QACV,OAAO,UAAU,CAAC,IAAM,UAAU,QAAQ;IAC5C;IAEA,qBACE,8OAAC;QAAO,WAAU;QAA2B,MAAK;QAAS,SAAS;kBACjE,SAAS,WAAW;;;;;;AAG3B","debugId":null}}]
+}

@@ -1,0 +1,899 @@
+/* [project]/app/globals.css [app-client] (css) */
+:root {
+  --bg: #f7f3ea;
+  --surface: #fffdf7;
+  --surface-strong: #fff;
+  --navy: #111d2e;
+  --navy-soft: #1d2b42;
+  --teal: #0e6b62;
+  --teal-dark: #0a4f49;
+  --teal-soft: #ddf3ee;
+  --warm: #f0d8a8;
+  --line: #d9d4c8;
+  --muted: #5e6470;
+  --shadow: 0 18px 50px rgba(17, 29, 46, .1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--navy);
+  background: radial-gradient(circle at top right, rgba(14, 107, 98, .18), transparent 28rem), linear-gradient(180deg, #f8f5ed 0%, var(--bg) 48%, #efe6d5 100%);
+  margin: 0;
+  padding-bottom: 86px;
+  font-family: Avenir Next, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+}
+
+main {
+  overflow: hidden;
+}
+
+h1, h2, h3, p, ul {
+  margin-top: 0;
+}
+
+h1, h2, h3 {
+  color: var(--navy);
+  letter-spacing: -.045em;
+  line-height: 1.02;
+}
+
+h1 {
+  margin-bottom: 18px;
+  font-size: max(3.2rem, min(15vw, 6.8rem));
+}
+
+.hero h1 {
+  margin-bottom: 12px;
+  font-size: max(2.65rem, min(12vw, 6.8rem));
+}
+
+h2 {
+  margin-bottom: 14px;
+  font-size: max(2.1rem, min(9vw, 4.6rem));
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+p, li {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+ul {
+  margin-bottom: 0;
+  padding-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+.hero, .section {
+  width: min(1140px, 100vw - 32px);
+  margin: 0 auto;
+}
+
+.hero {
+  gap: 18px;
+  min-height: auto;
+  padding: 28px 0 38px;
+  display: grid;
+}
+
+.eyebrow {
+  color: var(--teal);
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-size: .76rem;
+  font-weight: 900;
+}
+
+.hero__lead {
+  color: #334155;
+  margin-bottom: 14px;
+  font-size: 1.03rem;
+}
+
+.hero__badges {
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+  display: flex;
+}
+
+.hero__badges span, .mini-checks span {
+  color: var(--teal-dark);
+  background: rgba(221, 243, 238, .72);
+  border: 1px solid rgba(14, 107, 98, .16);
+  border-radius: 999px;
+  padding: 8px 11px;
+  font-size: .82rem;
+  font-weight: 900;
+  display: inline-flex;
+}
+
+.hero__actions, .final-cta form, .price-card form {
+  align-items: center;
+  gap: 12px;
+  display: grid;
+}
+
+.hero__purchase-points {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+  display: grid;
+}
+
+.hero__purchase-points span {
+  min-height: 42px;
+  color: var(--navy);
+  background: rgba(255, 253, 247, .84);
+  border: 1px solid rgba(17, 29, 46, .1);
+  border-radius: 15px;
+  align-items: center;
+  padding: 9px 10px;
+  font-size: .84rem;
+  font-weight: 900;
+  line-height: 1.25;
+  display: flex;
+}
+
+.button {
+  color: #fff;
+  background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+  width: 100%;
+  min-height: 56px;
+  font: inherit;
+  cursor: pointer;
+  border: 0;
+  border-radius: 18px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 24px;
+  font-weight: 900;
+  text-decoration: none;
+  display: inline-flex;
+  box-shadow: 0 14px 28px rgba(14, 107, 98, .25);
+}
+
+.button--secondary {
+  color: var(--teal-dark);
+  box-shadow: none;
+  background: #fff;
+  border: 1px solid rgba(14, 107, 98, .22);
+}
+
+.price-note, .support {
+  color: #455062;
+  margin: 0;
+  font-size: .92rem;
+  font-weight: 800;
+}
+
+.hero__visual {
+  grid-template-columns: 96px minmax(0, 1fr);
+  align-items: stretch;
+  gap: 14px;
+  display: grid;
+}
+
+.coach-frame {
+  background: radial-gradient(circle at 50% 16%, rgba(14, 107, 98, .14), transparent 45%), var(--surface-strong);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(17, 29, 46, .1);
+  border-radius: 28px;
+  place-items: center;
+  display: grid;
+  position: relative;
+  overflow: hidden;
+}
+
+.coach-image {
+  object-fit: contain;
+  width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+.coach-frame--hero {
+  border-radius: 22px;
+  min-height: 158px;
+  padding: 8px 8px 0;
+}
+
+.coach-frame--hero .coach-image {
+  max-height: 168px;
+}
+
+.phone-preview, .sample-card, .feature-card, .fit-card, .faq-list article, .price-card {
+  background: rgba(255, 253, 247, .9);
+  border: 1px solid rgba(17, 29, 46, .1);
+  border-radius: 26px;
+  box-shadow: 0 14px 40px rgba(17, 29, 46, .07);
+}
+
+.phone-preview {
+  padding: 16px;
+}
+
+.phone-preview > p, .sample-card > span, .mission-list span {
+  color: var(--teal);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: .72rem;
+  font-weight: 900;
+}
+
+.phone-preview h2 {
+  margin-bottom: 10px;
+  font-size: 1.55rem;
+}
+
+.phone-preview li {
+  margin-bottom: 4px;
+  font-size: .9rem;
+  line-height: 1.45;
+}
+
+.mini-checks {
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+  display: flex;
+}
+
+.section {
+  padding: 54px 0;
+}
+
+.trust-origin {
+  background: linear-gradient(135deg, rgba(255, 253, 247, .94), rgba(221, 243, 238, .68)), var(--surface);
+  border: 1px solid rgba(17, 29, 46, .1);
+  border-radius: 28px;
+  padding: 24px;
+  box-shadow: 0 14px 40px rgba(17, 29, 46, .07);
+}
+
+.trust-origin h2 {
+  font-size: max(1.9rem, min(8vw, 3.4rem));
+}
+
+.trust-origin p:last-child {
+  margin-bottom: 0;
+}
+
+.card-grid, .feature-grid, .preview-grid, .faq-list, .fit, .mission-layout, .final-cta {
+  gap: 16px;
+  display: grid;
+}
+
+.card-grid article, .feature-card, .fit-card, .faq-list article, .sample-card {
+  padding: 22px;
+}
+
+.card-grid article {
+  border-left: 4px solid var(--teal);
+  background: rgba(255, 253, 247, .78);
+  border-radius: 22px;
+}
+
+.promise {
+  background: linear-gradient(135deg, rgba(221, 243, 238, .8), rgba(255, 253, 247, .92)), var(--surface);
+  border-radius: 30px;
+  gap: 18px;
+  padding: 28px;
+  display: grid;
+}
+
+.coach-frame--inline {
+  min-height: 220px;
+}
+
+.coach-frame--inline .coach-image {
+  max-height: 250px;
+}
+
+.feature-grid {
+  grid-template-columns: 1fr;
+}
+
+.feature-card {
+  align-items: flex-start;
+  gap: 12px;
+  display: flex;
+}
+
+.feature-card span {
+  color: #fff;
+  background: var(--teal);
+  border-radius: 999px;
+  flex: none;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  font-weight: 900;
+  display: inline-grid;
+}
+
+.feature-card p {
+  color: var(--navy);
+  margin: 0;
+  font-weight: 800;
+}
+
+.section-head {
+  max-width: 760px;
+  margin-bottom: 22px;
+}
+
+.mission-layout {
+  align-items: start;
+}
+
+.coach-frame--mission {
+  min-height: 260px;
+  padding: 18px;
+}
+
+.coach-frame--mission .coach-image {
+  max-height: 300px;
+}
+
+.mission-list {
+  gap: 12px;
+  display: grid;
+}
+
+.mission-list article {
+  border: 1px solid var(--line);
+  background: rgba(255, 253, 247, .86);
+  border-radius: 24px;
+  padding: 20px;
+  position: relative;
+}
+
+.mission-list h3, .mission-list p {
+  margin-bottom: 6px;
+}
+
+.fit-card {
+  padding: 26px;
+}
+
+.fit-card--muted {
+  background: rgba(240, 216, 168, .25);
+}
+
+.preview-grid {
+  margin-top: 20px;
+}
+
+.sample-card > span, .sample-card h3 {
+  display: block;
+}
+
+.sample-card img {
+  object-fit: contain;
+  background: #fff;
+  border-radius: 18px;
+  width: 100%;
+  max-height: 260px;
+}
+
+.sample-card--accent {
+  background: linear-gradient(135deg, var(--navy) 0%, #1f3553 100%);
+}
+
+.sample-card--accent h3, .sample-card--accent p, .sample-card--accent span {
+  color: #fff;
+}
+
+.price-section {
+  padding-top: 34px;
+}
+
+.price-card {
+  text-align: center;
+  gap: 12px;
+  padding: 26px;
+  display: grid;
+}
+
+.coach-frame--cta {
+  border-radius: 999px;
+  justify-self: center;
+  width: 170px;
+  height: 170px;
+}
+
+.price {
+  color: var(--teal-dark);
+  margin: 0;
+  font-size: 4.6rem;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.faq-list {
+  margin-top: 20px;
+}
+
+.final-cta {
+  padding-bottom: 110px;
+}
+
+.final-cta > div:first-child {
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  border-radius: 30px;
+  padding: 28px;
+}
+
+.coach-frame--final {
+  min-height: 260px;
+}
+
+.coach-frame--final .coach-image {
+  max-height: 300px;
+}
+
+.mobile-sticky-cta {
+  z-index: 20;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  background: rgba(17, 29, 46, .92);
+  border: 1px solid rgba(255, 255, 255, .38);
+  border-radius: 22px;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  display: grid;
+  position: fixed;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  box-shadow: 0 18px 42px rgba(17, 29, 46, .28);
+}
+
+.mobile-sticky-cta span {
+  color: #fff;
+  font-weight: 950;
+}
+
+.mobile-sticky-cta .button {
+  border-radius: 15px;
+  min-height: 46px;
+}
+
+.mobile-sticky-cta form {
+  margin: 0;
+}
+
+.status-page {
+  place-items: center;
+  min-height: 100vh;
+  padding: 24px;
+  display: grid;
+}
+
+.status-card {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  text-align: center;
+  width: min(680px, 100%);
+  box-shadow: var(--shadow);
+  border-radius: 28px;
+  padding: 32px;
+}
+
+.status-card--access {
+  gap: 16px;
+  display: grid;
+}
+
+.access-link-box {
+  overflow-wrap: anywhere;
+  border: 1px solid var(--line);
+  text-align: left;
+  background: #fff;
+  border-radius: 18px;
+  gap: 8px;
+  padding: 14px;
+  display: grid;
+}
+
+.access-link-box span {
+  color: var(--teal);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: .75rem;
+  font-weight: 900;
+}
+
+.access-link-box code {
+  color: var(--navy);
+  font-size: .92rem;
+  line-height: 1.5;
+}
+
+.secondary-link {
+  color: var(--teal);
+  margin-top: 22px;
+  font-weight: 900;
+  display: block;
+}
+
+.guide {
+  width: min(920px, 100vw - 28px);
+  margin: 0 auto;
+  padding: 18px 0 70px;
+}
+
+.guide-nav {
+  z-index: 10;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  background: rgba(247, 243, 234, .92);
+  gap: 8px;
+  margin-bottom: 18px;
+  padding: 12px 0;
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  overflow-x: auto;
+}
+
+.guide-nav a {
+  color: var(--teal-dark);
+  background: #fff;
+  border: 1px solid rgba(14, 107, 98, .15);
+  border-radius: 999px;
+  flex: none;
+  padding: 9px 12px;
+  font-size: .82rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.guide-nav a.is-active {
+  color: #fff;
+  background: var(--teal);
+}
+
+.guide-hero, .guide-section, .guide-completion {
+  background: rgba(255, 253, 247, .9);
+  border: 1px solid rgba(17, 29, 46, .1);
+  border-radius: 28px;
+  gap: 18px;
+  margin-bottom: 18px;
+  padding: 24px;
+  display: grid;
+  box-shadow: 0 14px 38px rgba(17, 29, 46, .07);
+}
+
+.guide-coach {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 24px;
+  place-items: center;
+  display: grid;
+  overflow: hidden;
+}
+
+.guide-coach img {
+  object-fit: contain;
+  width: 100%;
+  max-height: 320px;
+}
+
+.guide-split, .guide-completion {
+  align-items: center;
+}
+
+.guide-card-grid, .guide-day-list, .guide-exercise-grid, .guide-next-prev {
+  gap: 14px;
+  display: grid;
+}
+
+.guide-link-card, .guide-day-card, .guide-exercise-card, .guide-checklist {
+  border: 1px solid var(--line);
+  background: rgba(255, 253, 247, .92);
+  border-radius: 22px;
+  padding: 18px;
+  box-shadow: 0 10px 28px rgba(17, 29, 46, .05);
+}
+
+.guide-day-card {
+  scroll-margin-top: 88px;
+}
+
+.guide-link-card {
+  color: inherit;
+  text-decoration: none;
+}
+
+.guide-link-card span, .guide-exercise-card span, .guide-day-card header span {
+  color: var(--teal);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-size: .78rem;
+  font-weight: 900;
+  display: block;
+}
+
+.guide-link-card strong, .guide-day-card header strong {
+  color: var(--navy);
+}
+
+.guide-day-card header {
+  gap: 4px;
+  margin-bottom: 12px;
+  display: grid;
+}
+
+.guide-day-card--saved {
+  background: linear-gradient(135deg, rgba(221, 243, 238, .55), rgba(255, 253, 247, .94)), var(--surface);
+  border-color: rgba(14, 107, 98, .38);
+}
+
+.guide-saved-badge {
+  color: #fff;
+  background: var(--teal);
+  letter-spacing: .04em;
+  border-radius: 999px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 12px;
+  padding: 7px 10px;
+  font-size: .76rem;
+  font-weight: 950;
+  display: inline-flex;
+}
+
+.guide-status-controls {
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+  display: flex;
+}
+
+.guide-status-controls button, .guide-checklist button {
+  color: var(--teal-dark);
+  background: var(--teal-soft);
+  font: inherit;
+  cursor: pointer;
+  border: 0;
+  border-radius: 999px;
+  padding: 8px 10px;
+  font-size: .86rem;
+  font-weight: 900;
+}
+
+.guide-checklist {
+  gap: 10px;
+  display: grid;
+}
+
+.guide-checklist button {
+  text-align: left;
+  border-radius: 18px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 46px;
+  line-height: 1.35;
+  display: flex;
+}
+
+.guide-checklist button span {
+  color: var(--teal-dark);
+  flex: none;
+  font-weight: 950;
+}
+
+.guide-checklist button.is-checked {
+  color: #fff;
+  background: var(--navy);
+}
+
+.guide-checklist button.is-checked span {
+  color: #fff;
+}
+
+.guide-status-controls button {
+  flex: 88px;
+  min-height: 42px;
+}
+
+.guide-status-controls button.is-active {
+  color: #fff;
+  background: var(--navy);
+  box-shadow: 0 10px 22px rgba(17, 29, 46, .16);
+}
+
+.guide-day-card--rest {
+  background: rgba(240, 216, 168, .22);
+}
+
+.guide-progress-card {
+  background: rgba(255, 253, 247, .9);
+  border: 1px solid rgba(14, 107, 98, .18);
+  border-radius: 22px;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding: 16px;
+  display: grid;
+  box-shadow: 0 10px 28px rgba(17, 29, 46, .05);
+}
+
+.guide-progress-card > div:first-child {
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.guide-progress-card span {
+  color: var(--teal);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-size: .78rem;
+  font-weight: 950;
+}
+
+.guide-progress-card strong {
+  color: var(--navy);
+  font-size: .98rem;
+}
+
+.guide-progress-bar {
+  background: rgba(14, 107, 98, .13);
+  border-radius: 999px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.guide-progress-bar span {
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+  height: 100%;
+  transition: width .18s;
+  display: block;
+}
+
+.guide-resume-panel {
+  background: linear-gradient(135deg, rgba(221, 243, 238, .74), rgba(255, 253, 247, .94)), var(--surface);
+  border-color: rgba(14, 107, 98, .22);
+}
+
+.guide-resume-actions {
+  gap: 10px;
+  margin-top: 8px;
+  display: grid;
+}
+
+.guide-resume-actions .button {
+  width: 100%;
+}
+
+.guide-exercise-card img {
+  object-fit: contain;
+  background: #fff;
+  border-radius: 18px;
+  width: 100%;
+  max-height: 320px;
+}
+
+.guide-next-prev {
+  grid-template-columns: 1fr 1fr;
+  margin-top: 22px;
+}
+
+.guide-next-prev a, .guide-next-prev span {
+  color: #fff;
+  background: var(--navy);
+  text-align: center;
+  border-radius: 18px;
+  justify-content: center;
+  align-items: center;
+  min-height: 52px;
+  padding: 12px;
+  font-weight: 900;
+  text-decoration: none;
+  display: flex;
+}
+
+@media (min-width: 760px) {
+  body {
+    padding-bottom: 0;
+  }
+
+  .button {
+    width: auto;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1fr) minmax(330px, .74fr);
+    align-items: center;
+    gap: 34px;
+    min-height: 84vh;
+    padding: 60px 0;
+  }
+
+  .hero__actions {
+    display: flex;
+  }
+
+  .hero__purchase-points {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .hero__visual {
+    grid-template-columns: 1fr;
+  }
+
+  .coach-frame--hero {
+    border-radius: 28px;
+    min-height: 300px;
+    padding: 18px 18px 0;
+  }
+
+  .coach-frame--hero .coach-image {
+    max-height: 360px;
+  }
+
+  .phone-preview {
+    padding: 22px;
+  }
+
+  .phone-preview h2 {
+    font-size: 2.4rem;
+  }
+
+  .feature-grid, .card-grid, .preview-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .fit, .final-cta, .promise, .mission-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+  }
+
+  .mobile-sticky-cta {
+    display: none;
+  }
+
+  .guide-hero, .guide-split, .guide-completion {
+    grid-template-columns: minmax(0, 1fr) minmax(260px, .56fr);
+  }
+
+  .guide-card-grid, .guide-day-list, .guide-exercise-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1040px) {
+  .card-grid, .preview-grid, .feature-grid, .faq-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/*# sourceMappingURL=app_globals_71f961d1.css.map*/
