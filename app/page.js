@@ -393,6 +393,19 @@ export default function HomePage() {
         </div>
       </section>
 
+      <footer className="site-footer">
+        <div>
+          <strong>Home Workout Guide</strong>
+          <p>Support: <a href={`mailto:${supportEmail}`}>{supportEmail}</a></p>
+        </div>
+        <nav aria-label="Footer links">
+          <Link href="/refund-policy">Refund Policy</Link>
+          <Link href="/terms">Terms</Link>
+          <Link href="/privacy">Privacy</Link>
+          <Link href="/commercial-disclosure">Commercial Disclosure</Link>
+        </nav>
+      </footer>
+
       <div className="mobile-sticky-cta">
         <span>{price} Guide</span>
         <CheckoutButton />

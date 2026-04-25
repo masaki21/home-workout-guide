@@ -9,19 +9,23 @@ export const metadata = {
 };
 
 const rows = [
-  ["Seller", "Home Workout Guide"],
-  ["Person Responsible", "Masaki Omae"],
-  ["Address", "Available upon request. Please contact us by email if disclosure is required."],
-  ["Phone Number", "Available upon request. Customer support is provided by email."],
+  ["Legal Name", "Masaki Omae"],
+  ["Business Name", "Home Workout Guide"],
+  ["Address", "We will disclose without delay if requested. Please contact us by email if disclosure is required."],
+  ["Phone Number", "We will disclose without delay if requested. Customer support is provided by email."],
   ["Email Address", supportEmail],
+  ["Head of Operations", "Masaki Omae"],
   ["Website", baseUrl],
-  ["Sales Price", "Prices are shown on the product page and checkout page. The 30-Day Home Workout Guide is $5 USD."],
-  ["Additional Fees", "Customers are responsible for their own internet connection, mobile data, or communication fees."],
-  ["Payment Method", "Credit card payment through Stripe."],
-  ["Payment Timing", "Payment is charged at the time of purchase."],
-  ["Delivery Time", "After successful payment, customers receive instant online access to the HTML guide from the success page."],
-  ["Returns, Cancellations, and Refunds", "Because this is a digital product, cancellations and returns after purchase are generally not accepted for customer convenience. If access fails after completed payment, please contact support. Refund requests are reviewed case by case."],
-  ["System Requirements", "An internet connection and a modern browser on a smartphone or computer are required."]
+  ["Price", "The 30-Day Home Workout Guide is $5 USD. The final price is shown on the product page and Stripe Checkout page."],
+  ["Additional Fees", "There are no shipping fees for this digital product. Customers are responsible for their own internet connection, mobile data, or communication fees."],
+  ["Accepted Payment Methods", "Credit card payment through Stripe Checkout."],
+  ["Payment Period", "Payment is processed immediately at the time of purchase."],
+  ["Delivery Times", "After successful payment, customers receive instant online access to the HTML guide from the success page."],
+  [
+    "Exchanges & Returns Policy",
+    "Customer convenience or non-defective digital product: because this is a digital product delivered by online access immediately after payment, cancellations, exchanges, and refunds after purchase are generally not accepted for customer convenience. Defective service or access issue: if payment is completed but guide access fails, please contact support. We will review the order, help restore access, or consider a refund where appropriate."
+  ],
+  ["Operating Environment", "An internet connection and a modern browser on a smartphone or computer are required."]
 ];
 
 export default function CommercialDisclosurePage() {
@@ -32,8 +36,7 @@ export default function CommercialDisclosurePage() {
         <h1>Commercial Disclosure</h1>
         <p>
           This page provides business and transaction information for online sales,
-          including disclosure information associated with Japan&apos;s Act on
-          Specified Commercial Transactions.
+          including commercial disclosure information for this digital product.
         </p>
         <div className="disclosure-table">
           {rows.map(([label, value]) => (
