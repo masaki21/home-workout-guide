@@ -524,6 +524,35 @@ li {
   margin-top: 28px;
 }
 
+.disclosure-table {
+  display: grid;
+  gap: 0;
+  margin-top: 24px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: white;
+}
+
+.disclosure-row {
+  display: grid;
+  gap: 6px;
+  padding: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.disclosure-row:last-child {
+  border-bottom: 0;
+}
+
+.disclosure-row strong {
+  color: var(--navy);
+}
+
+.disclosure-row p {
+  margin: 0;
+}
+
 .final-cta {
   padding-bottom: 110px;
 }

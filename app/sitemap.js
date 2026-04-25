@@ -31,6 +31,12 @@ export default function sitemap() {
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.3
+    },
+    {
+      url: `${baseUrl}/commercial-disclosure`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.3
     }
   ];
 }

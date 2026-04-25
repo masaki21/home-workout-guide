@@ -372,6 +372,7 @@ export default function HomePage() {
             <Link href="/refund-policy">Refund Policy</Link>
             <Link href="/terms">Terms</Link>
             <Link href="/privacy">Privacy</Link>
+            <Link href="/commercial-disclosure">Commercial Disclosure</Link>
           </div>
         </div>
       </section>
