@@ -34,6 +34,7 @@ NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_your_key_here
 STRIPE_PRICE_ID=price_your_5_dollar_product
 NEXT_PUBLIC_BASE_URL=http://localhost:3000
 NEXT_PUBLIC_SUPPORT_EMAIL=support@example.com
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
 ```
 
 For production, set `NEXT_PUBLIC_BASE_URL` to the Vercel URL or custom domain.
@@ -41,6 +42,10 @@ For production, set `NEXT_PUBLIC_BASE_URL` to the Vercel URL or custom domain.
 The Stripe Price connected to `STRIPE_PRICE_ID` should be a one-time `$5` payment.
 
 The placeholder values in `.env.example` will not work for checkout. Replace them with real Stripe test values before testing payment.
+
+`NEXT_PUBLIC_GA_ID` is optional. Set it to a Google Analytics 4 Measurement ID, such as
+`G-XXXXXXXXXX`, to track page views, checkout clicks, purchase completion, and landing page
+section depth.
 
 ## HTML Guide Access
 
