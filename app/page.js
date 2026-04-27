@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { LandingSectionTracker, TrackedCheckoutForm } from "./AnalyticsEvents";
 
 const supportEmail = process.env.NEXT_PUBLIC_SUPPORT_EMAIL || "support@example.com";
 
@@ -105,7 +104,13 @@ const faqs = [
 ];
 
 function CheckoutButton({ label = "Get Instant Access", location }) {
-  return <TrackedCheckoutForm label={label} location={location} />;
+  return (
+    <form action="/api/checkout" method="POST">
+      <button className="button" type="submit">
+        {label}
+      </button>
+    </form>
+  );
 }
 
 function CoachImage({ name, alt, className = "" }) {
@@ -117,7 +122,7 @@ function CoachImage({ name, alt, className = "" }) {
 export default function HomePage() {
   return (
     <main>
-      <section className="hero" data-analytics-section="hero">
+      <section className="hero">
         <div className="hero__copy">
           <p className="eyebrow">30-Day Mission · Instant Access Guide</p>
           <h1>Stop Guessing Your Home Workouts</h1>
@@ -165,7 +170,7 @@ export default function HomePage() {
         </aside>
       </section>
 
-      <section className="section trust-origin" data-analytics-section="trust-origin">
+      <section className="section trust-origin">
         <p className="eyebrow">Why This Guide Exists</p>
         <h2>Built for real beginner friction, not generic fitness theory.</h2>
         <p>
@@ -176,7 +181,7 @@ export default function HomePage() {
         </p>
       </section>
 
-      <section className="section problem" data-analytics-section="problem">
+      <section className="section problem">
         <p className="eyebrow">The Problem</p>
         <h2>Workout videos are useful. Random workouts are not a plan.</h2>
         <div className="card-grid">
@@ -195,7 +200,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section promise" data-analytics-section="promise">
+      <section className="section promise">
         <div className="coach-frame coach-frame--inline">
           <CoachImage name="guide" alt="Anime companion coach giving guidance" />
         </div>
@@ -210,7 +215,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section" data-analytics-section="what-you-get">
+      <section className="section">
         <p className="eyebrow">What You Get</p>
         <h2>Everything needed to start without building your own routine.</h2>
         <div className="feature-grid">
@@ -223,7 +228,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section mission" data-analytics-section="mission-progression">
+      <section className="section mission">
         <div className="section-head">
           <p className="eyebrow">Mission Progression</p>
           <h2>A guided 30-day journey, not a random workout bundle.</h2>
@@ -249,7 +254,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section fit" data-analytics-section="for-not-for">
+      <section className="section fit">
         <div className="fit-card">
           <h2>This is for you if...</h2>
           <ul>
@@ -270,7 +275,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section preview" data-analytics-section="product-preview">
+      <section className="section preview">
         <p className="eyebrow">Product Preview</p>
           <h2>See what the guide actually feels like.</h2>
         <div className="preview-grid">
@@ -311,7 +316,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section price-section" data-analytics-section="price-section">
+      <section className="section price-section">
         <div className="price-card">
           <div className="coach-frame coach-frame--cta">
             <CoachImage name="thumbsUp" alt="Anime companion coach giving thumbs up" />
@@ -324,7 +329,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section faq" data-analytics-section="faq">
+      <section className="section faq">
         <p className="eyebrow">FAQ</p>
         <h2>Before you start</h2>
         <div className="faq-list">
@@ -337,7 +342,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section policy-section" data-analytics-section="policies">
+      <section className="section policy-section">
         <div className="policy-card">
           <p className="eyebrow">Support And Policies</p>
           <h2>Clear purchase terms before checkout.</h2>
@@ -372,7 +377,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section final-cta" data-analytics-section="final-cta">
+      <section className="section final-cta">
         <div>
           <p className="eyebrow">Ready to start?</p>
           <h2>Follow the next 30 days without guessing.</h2>
@@ -405,7 +410,6 @@ export default function HomePage() {
         <span>{price} Guide</span>
         <CheckoutButton location="mobile-sticky-cta" />
       </div>
-      <LandingSectionTracker />
     </main>
   );
 }

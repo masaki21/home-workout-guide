@@ -1,7 +1,6 @@
 import Stripe from "stripe";
 import Link from "next/link";
 import CopyLinkButton from "./CopyLinkButton";
-import { PurchaseTracker } from "../AnalyticsEvents";
 import { guideEntryPath } from "../guide/guide-content";
 
 const supportEmail = process.env.NEXT_PUBLIC_SUPPORT_EMAIL || "support@example.com";
@@ -94,7 +93,6 @@ export default async function SuccessPage({ searchParams }) {
 
   return (
     <main className="status-page">
-      <PurchaseTracker sessionId={sessionId} />
       <section className="status-card status-card--access">
         <p className="eyebrow">Payment Complete</p>
         <h1>Your 30-day guide is ready.</h1>

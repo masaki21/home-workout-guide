@@ -1,7 +1,5 @@
 import "./globals.css";
-import GoogleAnalytics from "./GoogleAnalytics";
-
-const gaMeasurementId = process.env.NEXT_PUBLIC_GA_ID || "G-GFXKFC8V83";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
   title: "30-Day Home Workout Plan for Beginners",
@@ -14,7 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         {children}
-        <GoogleAnalytics measurementId={gaMeasurementId} />
+        <Analytics />
       </body>
     </html>
   );
