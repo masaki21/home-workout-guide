@@ -1,6 +1,8 @@
 import "./globals.css";
 import GoogleAnalytics from "./GoogleAnalytics";
 
+const gaMeasurementId = process.env.NEXT_PUBLIC_GA_ID || "G-GFXKFC8V83";
+
 export const metadata = {
   title: "30-Day Home Workout Plan for Beginners",
   description:
@@ -12,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         {children}
-        <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_ID} />
+        <GoogleAnalytics measurementId={gaMeasurementId} />
       </body>
     </html>
   );
